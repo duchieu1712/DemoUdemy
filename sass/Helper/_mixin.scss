@@ -1,0 +1,136 @@
+@mixin styleText($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin styleButton($bg-color, $border-color, $radius, $py, $px) {
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+    border-radius: $radius;
+    padding: $py $px;
+}
+@mixin styleHoverButton($bg-color, $border-color, $color) {
+    background-color: $bg-color;
+    border-color: $border-color;
+    color: $color;
+}
+
+@mixin styleItem() {
+    margin-right: 15px;
+    border: 1px solid gainsboro;
+    height: 285px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    .item__img {
+        position: relative;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .courses__text {
+        padding: 15px 10px 0 15px;
+        font-size: small;
+        h5 {
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            width: 100%;
+            text-overflow: ellipsis;
+            font-weight: 700;
+            height: 42px;
+            font-size: 15px;
+            color: #29303b;
+            margin-bottom: 10px;
+            overflow: hidden;
+            line-clamp: 2;
+            line-height: 1.5;
+        }
+        p {
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            font-size: 12px;
+            color: #686f7a;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .courses__star {
+            color: #f4c150;
+            span {
+                font-weight: 700;
+                color: #505763;
+            }
+        }
+        h6 {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    &:hover {
+        .item__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.336);
+        }
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    }
+
+}
+@mixin arrow() {
+    .tab-pane{
+        position: relative;
+        .slick-arrow{
+            color: #007791;
+            font-size: 24px;
+            text-align: center;
+            width: 47px;
+            height: 47px;
+            line-height: 47px;
+            border-radius: 50%;
+            border: 1px solid gainsboro;
+            background: white;
+            z-index: 99;
+            cursor: pointer;
+            &:hover{
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+            }
+        }
+        .fa-chevron-left{
+            position: absolute;
+            top:50%;
+            left: -18px;
+            transform: translateY(-120%);
+        }
+        .fa-chevron-right{
+            position: absolute;
+            top:50%;
+            right: -12px;
+            transform: translateY(-120%);
+        }
+    }
+}
+// $screen: biến chứa tên màn hình
+@mixin responsive($screen) {
+    // Kiểm tra tên màn hình hợp lệ
+    @if (map-has-key($map: $breakpoints, $key: $screen)) {
+        // Tên màn hình đúng (hợp lệ)
+        // $value: chứa giá trị màn hình lấy đc (vd: 576px)
+        $value: map-get(
+            $map: $breakpoints,
+            $key: $screen,
+        );
+        @media screen and (max-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn 'Man hinh khong hop le';
+    }
+}

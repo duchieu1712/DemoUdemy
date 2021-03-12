@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clear{
+    clear: both;
+}
+html,body{
+    font-size: 15px;
+    line-height: 1.43;
+    color: #29303b;;
+    font-family: 'Roboto', sans-serif;
+    @include styleText($color-black-0,$fs-0,$fw-normal);
+}

@@ -1,0 +1,96 @@
+.feedback-companies {
+    background: #f7f8fa;
+    .feedback__content {
+        width: 90%;
+        margin: 0 auto;
+        padding: 30px 0;
+        h4 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.33em;
+        }
+        .row {
+            margin: 0;
+            .feedback__item {
+                min-height: 260px;
+                margin-right: 12px;
+                padding: 32px;
+                border-color: gainsboro;
+                background-color: #fff;
+                border-radius: 3px;
+                box-shadow: 1px 1px 1px 1px rgba(20, 23, 28, 0.15);
+                outline: none;
+                .feedback__ava {
+                    margin-bottom: 18px;
+                    .ava__clone {
+                        width: 64px;
+                        height: 64px;
+                        margin-right: 15px;
+                        border-radius: 50%;
+                        background: #686f7a;
+                        text-align: center;
+                        line-height: 64px;
+                        font-weight: 700;
+                        font-size: 18px;
+                        color: white;
+                        display: inline-block;
+                    }
+                    img {
+                        display: inline;
+                        width: 64px;
+                        height: 64px;
+                        margin-right: 15px;
+                        border-radius: 50%;
+                    }
+                    span {
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 1.5em;
+                    }
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 1.5em;
+                    }
+                }
+            }
+        }
+        @include arrow();
+        .fa-chevron-left {
+            transform: translateY(-50%) !important;
+        }
+        .fa-chevron-right {
+            transform: translateY(-50%) !important;
+        }
+    }
+    .companies {
+        padding-bottom: 20px;
+        h6 {
+            color: #686f7a;
+            padding-top: 16px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 400;
+            padding-bottom: 32px;
+        }
+        .companies__logo {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 24px;
+        }
+        .companies__content {
+            display: flex;
+            .companies__item {
+                width: 50%;
+                border-right: 1px solid #dedfe0;
+                padding: 28px 30px;
+                text-align: center;
+                p{
+                    max-width: 400px;
+                    margin: 1em auto;
+                }
+            }
+        }
+    }
+}

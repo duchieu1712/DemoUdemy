@@ -1,0 +1,12 @@
+.students {
+    width: 90%;
+    margin: 24px auto;
+    h4 {
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 1.47em;
+        color: #505763;
+        margin-bottom: 10px;
+    }
+    @include arrow();
+}

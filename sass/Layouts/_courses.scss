@@ -1,0 +1,76 @@
+.courses {
+    width: 100%;
+    .courses__content {
+        width: 90%;
+        margin: 30px auto;
+        .col-4 {
+            background: #f7f8fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .courses__text {
+                padding-left: 22px;
+                h4 {
+                    font-size: 19px;
+                    font-weight: 700;
+                    line-height: 1.47em;
+                }
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 1.5em;
+                }
+            }
+            @include responsive("large") {
+                display: none;
+            }
+        }
+        .col-8 {
+            .nav-tabs {
+                margin-bottom: 15px;
+                .nav-item {
+                    border: none;
+                    a {
+                        display: block;
+                        padding: 11px 12px;
+                        font-size: 15px;
+                        color: #14171c;
+                        border: none;
+                        position: relative;
+                        &:hover {
+                            color: #007791;
+                        }
+                        &::after {
+                            content: "";
+                            display: block;
+                            background: #007791;
+                            height: 6px;
+                            width: 100%;
+
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            opacity: 0;
+                        }
+                        &.active::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            @include arrow();
+            @include responsive("large"){
+                max-width: 100%;
+                h6{
+                    margin-top: 0;
+                }
+            }
+            @include responsive("medium"){
+                max-width: 100%;
+                .nav-tabs{
+                    display:block;
+                }
+            }
+        }
+    }
+}

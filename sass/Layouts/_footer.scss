@@ -1,0 +1,132 @@
+footer {
+    .footer__menu {
+        border-top: 1px solid #e8e9eb;
+        border-bottom: 1px solid #e8e9eb;
+        .row {
+            width: 90%;
+            margin: 40px auto 30px;
+            .col-12 {
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    height: 110px;
+                    margin-bottom: 10.5px;
+                    li {
+                        flex: 25%;
+                        flex-grow: 0;
+                        a {
+                            text-decoration: none;
+                            color: #007791;
+                            font-size: 13px;
+                            background-color: transparent;
+                            font-weight: 400;
+                            text-decoration: none;
+                            outline: none;
+                            &:hover {
+                                color: #003845;
+                            }
+                        }
+                        .text-big {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+            .footer__language {
+                text-align: right;
+                button {
+                    color: #686f7a;
+                    font-weight: 700;
+                    font-size: 13px;
+                    width: 160px;
+                    padding: 9px 12px;
+                    background: #fff;
+                    text-align: left;
+                    outline: none;
+                    box-shadow: none !important;
+                    i {
+                        margin-right: 30px;
+                    }
+                    &:hover {
+                        color: #29303b;
+                        background-color: #f7f8fa;
+                        border-color: #29303b;
+                    }
+                }
+                .dropdown-menu {
+                    border: none;
+                    border-radius: 2px;
+                    box-shadow: 0 4px 16px rgba(20, 23, 28, 0.25);
+                    background-clip: padding-box;
+                    width: 100%;
+                    ul {
+                        list-style: none;
+                        li {
+                            a {
+                                display: block;
+                                padding: 5px 12px;
+                                clear: both;
+                                font-size: 13px;
+                                font-weight: 400;
+                                line-height: 1.43;
+                                color: #505763;
+                                text-decoration: none;
+                            }
+                            &:hover {
+                                background: #b0b4b9a1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer__copyright {
+        width: 90%;
+        margin: 20px auto ;
+        display: flex;
+        justify-content: space-between;
+        .footer__left {
+            display: flex;
+            img {
+                width: 110px;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+            p {
+                color: #686f7a;
+                font-size: 13px;
+                line-height: 18px;
+                padding-top: 20px;
+                font-weight: 300;
+            }
+        }
+        .footer__right{
+            display: flex;
+            align-items: center;
+            ul{
+                list-style: none;
+                li{
+                    display: inline;
+                    padding-right: 10px;
+                    a{
+                        text-decoration: none;
+                        color: #007791;
+                        font-size: 13px;
+                        &:hover{
+                            color: #003845;
+                        }
+                    }
+                    @include responsive("medium"){
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .footer__line{
+        border-top: 6px solid #ec5252;
+    }
+}

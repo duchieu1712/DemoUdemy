@@ -1,0 +1,130 @@
+header {
+    font-size: 12px;
+    .navbar {
+        @include styleText($color-black-light, $fs-1, $fw-normal);
+        .nav-link {
+            @include styleText($color-black-light, $fs-1, $fw-normal);
+        }
+    }
+    .navbar-toggler {
+        color: $color-gray-4;
+    }
+    .navbar-expand-md{
+        flex-wrap: nowrap;
+    }
+}
+.header__left {
+    display: flex;
+    color: #505763;
+
+    // flex-grow: tăng kích thước của con(chỉ dùng cho flex)
+    .navbar-brand {
+        img {
+            width: 110px;
+        }
+    }
+    .header__categories {
+        margin: 0 10px;
+        cursor: pointer;
+        align-self: center;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        padding: 12px 12px;
+        &:hover{
+            background: rgb(240, 240, 245);
+            border-color: rgb(212, 212, 212);
+        }
+    }
+    .header__form {
+        flex-grow: 1;
+        margin-left: 20px;
+        .input-group {
+            .form-control {
+                border: none;
+                background-color: rgb(240, 240, 245);
+                font-size: 13px;
+                height: 44px;
+                padding: 10px 12px;
+                box-shadow: none;
+            }
+            .input-group-text{
+                border: none;
+                background-color:rgb(240, 240, 245);
+                color: #ec5252;
+                cursor: pointer;
+                &:hover{
+                    color: white;
+                    background: #ec5252;
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+.header__right {
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        a{
+            cursor: pointer;
+            padding: 10px 14px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+        .text:hover a{
+            background:  rgb(240, 240, 245);
+            border-color: rgb(212, 212, 212);
+        }
+        .fa-shopping-cart{
+            cursor: pointer;
+            font-size: 16px;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            text-align: center;
+            line-height: 35px;
+            &:hover{
+                background:  rgb(240, 240, 245);
+                border-color: rgb(212, 212, 212);
+            }
+        }
+        .header-right-divider{
+            border-left: 1px solid black;
+            height: 60%;
+        }
+        .udebtn-group {
+            white-space: nowrap;
+        }
+    }
+    // 1200px
+    @include responsive("extra-large") {
+        // Code sẽ đc gắn vào vị trí của @content
+        justify-content: end;
+        .business,
+        .teach {
+            display: none;
+        }
+    }
+    // 768px
+    @include responsive("medium") {
+        // Code sẽ đc gắn vào vị trí của @content
+        .udebtn-group {
+            display: none;
+        }
+    }
+}
+
+.header__left {
+    // 768px
+    @include responsive("medium") {
+        justify-content: center;
+        // Code sẽ đc gắn vào vị trí của @content
+        .header__categories,
+        .header__form {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.intro{
+    height: 85px;
+    background: linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+    width: 100%;
+    color: white;
+    .intro__content{
+        width: 90%;
+        margin: 0 auto;
+        height: 100%;
+        .intro__item{
+            display: flex;
+            height: 100%;
+            align-items: center;
+            width: max-content;
+            i{
+                font-size: 45px;
+                margin-right: 16px;
+            }
+            .intro__text{
+                h5{
+                    margin-bottom: 0;
+                }
+                p{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    @include responsive("large"){
+        display: none;
+    }
+}

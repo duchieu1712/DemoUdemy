@@ -1,0 +1,31 @@
+
+@import './Helper/variables';
+@import './Helper/mixin';
+
+// Vendor
+// Code của thư viện
+
+// Base 
+@import './Base/reset';
+@import './Base/customize';
+
+// Components
+@import './Components/button';
+@import './Components/item';
+
+// Layouts 
+@import './Layouts/header';
+@import './Layouts/carousel';
+@import './Layouts/intro';
+@import './Layouts/courses';
+@import './Layouts/services';
+@import './Layouts/students';
+@import './Layouts/banner';
+@import './Layouts/topCategories';
+@import './Layouts/feedback-companies';
+@import './Layouts/footer';
+// Page
+// Code riêng cho 1 trang cụ thể
+
+// Theme
+// dark

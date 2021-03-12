@@ -1,0 +1,35 @@
+.topCategories__content {
+    padding: 30px 0;
+    width: 90%;
+    margin: 0 auto;
+    h3 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.33em;
+    }
+    .col-lg-3 {
+        padding: 10px 15px;
+        .topCategories__item {
+            border: 1px solid gainsboro;
+            outline: none;
+            padding: 15px;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+            // line-height: 32px;
+            i {
+                font-size: 32px;
+                font-weight: 600;
+                padding-right: 15px;
+            }
+            span {
+                font-size: 15px;
+                height: 30px;
+                line-height: 30px;
+            }
+            &:hover {
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+}
